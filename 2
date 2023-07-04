@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <iterator>
+#include <algorithm>
+#include <unordered_map>
+using namespace std;
+
+#define ll long long
+#define ar array
+
+
+//int n,b,a[100];
+
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	int t;
+	cin>>t;
+	while(t--){
+		ll n;
+		cin>>n;
+		int count=0;
+		if(n<=9){
+			cout<<n<<endl;
+			continue;
+		}
+		count+=9;
+		for(ll i=10;i<=n;i++){
+			ll temp=i;
+			int r=temp%10;
+			bool flag=false;		
+			while(temp>0){
+				if(temp%10==r){
+					flag=true;
+				}
+				else{
+					flag=false;
+					break;
+				}
+				temp=temp/10;
+				cout<<temp<<" ";
+			}
+			if(flag){
+				count++;
+			}
+			cout<<endl;
+		}	
+		cout<<count<<endl;	
+	}
+}
+
+
+
+

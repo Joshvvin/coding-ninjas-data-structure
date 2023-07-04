@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int n;
+	string s;
+	cin>>s;
+	string t;
+	cin>>t;
+	cin>>n;
+	if(s.size()+t.size()<=n)
+		cout<<"Yes"<<endl;
+	else{
+		int x=0;
+		while((x<s.size()&&(x<t.size())){
+			if(s[x]==t[x]) x++;
+			else	break;		
+		}
+		if((s.size()-x+t.size()-x)>=n)
+			//cout<<x;
+			cout<<"Yes"<<endl;
+		else
+			cout<<x;
+			//cout<<"No"<<endl;
+	}
+	return 0;
+}
